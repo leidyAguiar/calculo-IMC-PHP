@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+	<title>Calculadora IMC</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <style>
+        body{
+            padding-top: 5%;
+        }
+
+        h4{
+            height: 50px;
+            min-width: 90%;
+            text-align: center;
+            font-size: 18pt;
+            padding: 10px;
+        }
+    </style>
+	<div class="container">
+        <div class='row content'>
+            <div class='col-sm-12 jumbotron'>
+                <h1 class='text-center'>Calculadora de IMC</h1>
+            </div>
+        </div>
+        <div class='row jumbotron'>
+            <div class="col-sm-6 d-flex flex-column justify-content-center">
+                <h3>O que é o IMC e como se relaciona com a obesidade?</h3>
+                <p>De forma simples, a obesidade pode ser determinada pelo cálculo do Índice de Massa Corporal – IMC. Esse índice é dividido em faixas de IMC, que indicam seu grau de obesidade.</p>
+                <p>Esta fórmula é bastante simples: divida o seu peso (Quilos) pela sua altura (Metros) ao quadrado (o número multiplicado por ele mesmo).</p>
+                <h4>IMC = Peso ÷ Altura²</h4>
+                <p>Mas para simplificar, temos aqui uma calculadora automática. Basta você inserir os dados e o resultado já sai na hora. De posse deste índice é só consultar a tabela que indica os níveis de obesidade.</p>
+            </div>
+            <div class='col-sm-6'>
+                <form action="./resultadoIMC.php" method="post" accept-charset="utf-8">
+                    <div class="col-sm-12 form-group">
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome" id="nome" class="form-control" style="width: 500px;" required><br>	
+                    </div>
+                    <div class="col-sm-12 form-group">
+                        <label for="cpf">CPF</label>
+                        <input type="text" name="cpf" id="cpf" placeholder="000.000.000-00" class="form-control" style="width: 500px;" required><br>
+                    </div>
+                    <div class="col-sm-12 form-group">
+                        <label for="contato">Contato</label>
+                        <input class="form-control js-imc-peso mask-imc mask-imc-peso" type="text" name="contato" id="contato" placeholder="(99) 9.99999-9999" class="form-control" style="width: 500px;" required><br>
+                    </div>
+                    <div class="col-sm-12 form-group">
+                        <label for="data">Data Coleta</label>
+                        <input type="date" name="data" id="data" class="form-control" style="width: 500px;" required><br>
+                    </div>
+                    <div class="col-sm-12 form-group">
+                        <label for="peso">Peso (Kg) </label>
+                        <input type="number" name="peso" id="peso" step=".01" placeholder="55.55" class="form-control" style="width: 500px;" required><br>	
+                    </div>
+                    <div class="col-sm-12 form-group">
+                        <label for="altura">Altura</label>
+                        <input type="number" name="altura" id="altura" step=".01" placeholder="1.55" class="form-control" style="width: 500px;" required><br>
+                    </div>
+                    <div class="col-sm-12 form-group">
+                        <button class="btn btn-block btn-primary" name="btnCalcular" type="submit">
+                            Calcular
+                        </button>
+                    </div>
+                </form>
+            </div>  
+            </div>
+        </div>
+    </div>
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">© 2023 Leidiane Cunha de Aguiar</p>
+        <p class="mb-1">® Todos os direitos reservados</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.13/jquery.mask.min.js"></script>
+    <script src="/js/mask.js"></script>
+</body>
+</html>
